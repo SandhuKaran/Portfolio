@@ -1,0 +1,64 @@
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app-container {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevents scrollbars on the container */
+}
+
+body {
+  overflow-y: scroll; /* Allows scrolling on the body */
+}
+
+canvas {
+  display: block;
+}
+
+.app-container {
+  height: 500vh; /* Make the container tall enough to scroll */
+  position: relative;
+}
+
+main {
+  position: absolute;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+  pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+body {
+  background-color: #111;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
