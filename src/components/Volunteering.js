@@ -14,7 +14,7 @@ export default function Volunteering() {
   return (
     <Text
       ref={ref}
-      position={[0, -30, -10]}
+      position={[0, -36, -10]}
       fontSize={2}
       color="white"
       material-transparent

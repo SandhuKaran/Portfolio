@@ -24,7 +24,7 @@ import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import ".././styles.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
-useGLTF.preload("/img/tag.glb");
+useGLTF.preload("/models/tag.glb");
 useTexture.preload("/img/1.png");
 
 function Band({ maxSpeed = 50, minSpeed = 10 }) {
@@ -37,7 +37,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     angularDamping: 2,
     linearDamping: 2,
   };
-  const { nodes, materials } = useGLTF("/img/tag.glb");
+  const { nodes, materials } = useGLTF("/models/tag.glb");
   const texture = useTexture("/img/1.png");
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
