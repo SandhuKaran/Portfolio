@@ -23,9 +23,9 @@ export default function App() {
   return (
     <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
       {/* <OrbitControls /> */}
-      <ScrollControls pages={10} damping={0.1}>
+      <ScrollControls pages={10} drag={0.1} damping={0.3}>
         <Scroll>
-          <ambientLight intensity={Math.PI} />
+          <ambientLight intensity={Math.PI - 2} />
           <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
             <Band />
           </Physics>

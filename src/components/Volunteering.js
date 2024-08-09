@@ -1,28 +1,106 @@
+// Volunteering.js
 import React, { useEffect, useRef } from "react";
 import { Text } from "@react-three/drei";
 import { TweenMax } from "gsap";
+import { Tent } from "./Tent";
+
+const volunteeringExperiences = [
+  {
+    position: "Community Volunteer",
+    organization: "Local Shelter",
+    description:
+      "Assisted in organizing events and \nprovided support to the community \nmembers.",
+  },
+  {
+    position: "Environmental Activist",
+    organization: "Green Earth",
+    description:
+      "Participated in tree plantation drives \nand awareness campaigns for \nenvironmental conservation.",
+  },
+  {
+    position: "Teaching Assistant",
+    organization: "Youth Education Program",
+    description:
+      "Helped students with their studies \nand organized educational activities \nto promote learning.",
+  },
+];
 
 export default function Volunteering() {
   const ref = useRef();
+  const refs = useRef([]);
 
   useEffect(() => {
     if (ref.current) {
       TweenMax.to(ref.current.material, 4, { opacity: 1 });
     }
+
+    refs.current.forEach((item, index) => {
+      if (item) {
+        TweenMax.to(item.position, 4, { x: 0, opacity: 1, delay: index * 0.5 });
+      }
+    });
   }, []);
 
   return (
-    <Text
-      ref={ref}
-      position={[0, -36, -10]}
-      fontSize={2}
-      color="white"
-      material-transparent
-      material-opacity={0}
-      anchorX="center"
-      anchorY="middle"
-    >
-      Volunteering
-    </Text>
+    <>
+      <Text
+        ref={ref}
+        position={[5.2, -41, -15]} // Adjust the position as needed
+        fontSize={1.6}
+        font={"Raleway/static/Raleway-ExtraBold.ttf"}
+        color="white"
+        material-transparent
+        material-opacity={0}
+        anchorX="center"
+        anchorY="middle"
+      >
+        VOLUNTEERING
+      </Text>
+
+      <Tent position={[5.2, -45, -12]} />
+      <group position={[-5, -43, 0]}>
+        {volunteeringExperiences.map((exp, index) => (
+          <group key={index} position={[0, -index * 2.6, 0]}>
+            <Text
+              ref={(el) => (refs.current[index] = el)}
+              position={[0, 0, 0]}
+              fontSize={0.4}
+              font={"Raleway/static/Raleway-Bold.ttf"}
+              color="white"
+              material-transparent
+              material-opacity={1}
+              anchorX="left"
+              anchorY="middle"
+            >
+              {exp.position}
+            </Text>
+            <Text
+              position={[0, -0.4, 0]}
+              fontSize={0.3}
+              font={"Raleway/static/Raleway-Medium.ttf"}
+              color="white"
+              material-transparent
+              material-opacity={1}
+              anchorX="left"
+              anchorY="middle"
+            >
+              {exp.organization}
+            </Text>
+            <Text
+              position={[0, -1.2, 0]}
+              fontSize={0.3}
+              font={"Raleway/static/Raleway-Light.ttf"}
+              color="white"
+              material-transparent
+              material-opacity={1}
+              anchorX="left"
+              anchorY="middle"
+            >
+              {exp.description}
+            </Text>
+          </group>
+        ))}
+      </group>
+    </>
   );
 }

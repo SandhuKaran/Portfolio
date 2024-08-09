@@ -13,7 +13,7 @@ export function Telescope(props) {
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.003; // Rotate around Y-axis
+      groupRef.current.rotation.y += 0.007; // Rotate around Y-axis
       groupRef.current.rotation.x += 0; // Optional: Rotate around X-axis
     }
   });

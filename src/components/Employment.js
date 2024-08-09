@@ -9,19 +9,19 @@ const experiences = [
     position: "Frontend Developer",
     company: "Tech Solutions Inc.",
     description:
-      "Developed and maintained web applications using React, ensuring optimal performance and user experience.",
+      "Developed and maintained \nweb applications using React, ensuring \noptimal performance and user experience.",
   },
   {
     position: "Software Engineer Intern",
     company: "Innovative Labs",
     description:
-      "Assisted in the development of a machine learning project, contributing to data preprocessing and model training.",
+      "Assisted in the development of a \nmachine learning project, contributing to \ndata preprocessing and model training.",
   },
   {
     position: "UI/UX Designer",
     company: "Creative Minds",
     description:
-      "Designed intuitive user interfaces and improved user experience for various mobile applications.",
+      "Designed intuitive user interfaces and \nimproved user experience \nfor various mobile applications.",
   },
 ];
 
@@ -45,8 +45,8 @@ export default function Employment() {
     <>
       <Text
         ref={ref}
-        position={[5, -12, -15]} // Adjust the position as needed
-        fontSize={2}
+        position={[6.4, -12, -15]} // Adjust the position as needed
+        fontSize={1.6}
         font={"Raleway/static/Raleway-ExtraBold.ttf"}
         color="white"
         material-transparent
@@ -57,10 +57,11 @@ export default function Employment() {
         EXPERIENCE
       </Text>
 
-      <Suitcase position={[5, -15, -8]} />
-      <group position={[-5, -10, 0]}>
+      <Suitcase position={[6.4, -15, -12]} />
+
+      <group position={[-5, -13, 0]}>
         {experiences.map((exp, index) => (
-          <group key={index} position={[0, -index * 2.3, 0]}>
+          <group key={index} position={[0, -index * 2.6, 0]}>
             <Text
               ref={(el) => (refs.current[index] = el)}
               position={[0, 0, 0]}
@@ -75,7 +76,7 @@ export default function Employment() {
               {exp.position}
             </Text>
             <Text
-              position={[0, -0.5, 0]}
+              position={[0, -0.4, 0]}
               fontSize={0.3}
               font={"Raleway/static/Raleway-Medium.ttf"}
               color="white"
@@ -87,9 +88,9 @@ export default function Employment() {
               {exp.company}
             </Text>
             <Text
-              position={[0, -1, 0]}
+              position={[0, -1.2, 0]}
               fontSize={0.3}
-              font={"Raleway/static/Raleway-Thin.ttf"}
+              font={"Raleway/static/Raleway-Light.ttf"}
               color="white"
               material-transparent
               material-opacity={1}
@@ -98,7 +99,6 @@ export default function Employment() {
             >
               {exp.description}
             </Text>
-            
           </group>
         ))}
       </group>

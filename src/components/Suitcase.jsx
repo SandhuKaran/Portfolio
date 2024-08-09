@@ -16,13 +16,13 @@ export function Suitcase(props) {
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.003; // Rotate around Y-axis
+      groupRef.current.rotation.y += 0.007; // Rotate around Y-axis
       groupRef.current.rotation.x += 0; // Optional: Rotate around X-axis
     }
   });
 
   return (
-    <group {...props} scale={[4, 4, 4]} ref={groupRef} dispose={null}>
+    <group {...props} scale={[5, 5, 5]} ref={groupRef} dispose={null}>
       <group>
         <group name="group881833563">
           <mesh

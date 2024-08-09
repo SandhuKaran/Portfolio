@@ -9,19 +9,19 @@ const projects = [
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website showcasing my skills and projects, built with React and Three.js.",
+      "A personal portfolio website \nshowcasing my skills and projects, \nbuilt with React and Three.js.",
     image: "../../public/img/project1.jpg",
   },
   {
     title: "E-commerce Platform",
     description:
-      "Developed an e-commerce platform with a custom shopping cart and payment integration.",
+      "Developed an e-commerce \nplatform with a custom shopping \ncart and payment integration.",
     image: "path/to/image2.jpg",
   },
   {
     title: "Weather App",
     description:
-      "A weather application providing real-time weather updates and forecasts using a public API.",
+      "A weather application \nproviding real-time weather updates \nand forecasts using a public API.",
     image: "path/to/image3.jpg",
   },
 ];
@@ -46,7 +46,7 @@ export default function Projects() {
     <>
       <Text
         ref={ref}
-        position={[-4, -24, -10]} // Adjust the position as needed
+        position={[-6.3, -26, -15]} // Adjust the position as needed
         fontSize={2}
         font={"Raleway/static/Raleway-ExtraBold.ttf"}
         color="white"
@@ -57,10 +57,10 @@ export default function Projects() {
       >
         PROJECTS
       </Text>
-      <Telescope position={[-5, -27, -8]} />
-      <group position={[0, -23, 0]}>
+      <Telescope position={[-6.3, -30, -12]} />
+      <group position={[0, -28, 0]}>
         {projects.map((project, index) => (
-          <group key={index} position={[5, -index * 2.3, 0]}>
+          <group key={index} position={[5, -index * 2.6, 0]}>
             <Text
               ref={(el) => (refs.current[index] = el)}
               position={[0, 0, 0]}
@@ -75,9 +75,9 @@ export default function Projects() {
               {project.title}
             </Text>
             <Text
-              position={[0, -0.5, 0]}
+              position={[0, -0.8, 0]}
               fontSize={0.3}
-              font={"Raleway/static/Raleway-Thin.ttf"}
+              font={"Raleway/static/Raleway-Light.ttf"}
               color="white"
               material-transparent
               material-opacity={1}

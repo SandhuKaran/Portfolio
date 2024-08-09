@@ -14,7 +14,7 @@ export default function Skills() {
   return (
     <Text
       ref={ref}
-      position={[0, -48, -10]}
+      position={[0, -54, -10]}
       fontSize={2}
       color="white"
       material-transparent

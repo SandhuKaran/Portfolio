@@ -2,7 +2,6 @@
 import React, { useRef, useEffect } from "react";
 import { Text, MeshReflectorMaterial } from "@react-three/drei";
 import { gsap } from "gsap";
-import { degToRad } from "three/src/math/MathUtils.js";
 
 export default function WelcomeText() {
   const refs = useRef([]);
@@ -40,11 +39,11 @@ export default function WelcomeText() {
           {text}
         </Text>
       ))}
-      <mesh position={(0, 0, 5)}>
+      <mesh position={(0, 0, 0)}>
         <planeGeometry args={[100, 200]} />
         <MeshReflectorMaterial
           blur={[50, 50]}
-          resolution={512}
+          resolution={1024}
           mixBlur={1}
           mixStrength={15}
           roughness={1}
@@ -52,7 +51,7 @@ export default function WelcomeText() {
           opacity={0.3}
           transparent
           minDepthThreshold={0.3}
-          maxDepthThreshold={0.5}
+          maxDepthThreshold={0.8}
           color="#333"
           metalness={1}
         />
