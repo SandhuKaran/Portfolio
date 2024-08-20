@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { Text } from "@react-three/drei";
 import { TweenMax } from "gsap";
-import { Tent } from "./Tent";
+import { Houseplant } from "./Houseplant";
 
 const volunteeringExperiences = [
   {
@@ -57,7 +57,7 @@ export default function Volunteering() {
         VOLUNTEERING
       </Text>
 
-      <Tent position={[5.2, -45, -12]} />
+      <Houseplant position={[5.2, -46.5, -12]} />
       <group position={[-5, -43, 0]}>
         {volunteeringExperiences.map((exp, index) => (
           <group key={index} position={[0, -index * 2.6, 0]}>

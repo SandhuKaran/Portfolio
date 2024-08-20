@@ -22,7 +22,7 @@ export default function WelcomeText() {
   const texts = ["BEYOND", "LIMITS"];
 
   return (
-    <group position={[-10.4, 2, -15]}>
+    <group position={[-10.4, 4, -15]}>
       {texts.map((text, index) => (
         <Text
           key={index}

@@ -10,19 +10,16 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website \nshowcasing my skills and projects, \nbuilt with React and Three.js.",
-    image: "../../public/img/project1.jpg",
   },
   {
     title: "E-commerce Platform",
     description:
       "Developed an e-commerce \nplatform with a custom shopping \ncart and payment integration.",
-    image: "path/to/image2.jpg",
   },
   {
     title: "Weather App",
     description:
       "A weather application \nproviding real-time weather updates \nand forecasts using a public API.",
-    image: "path/to/image3.jpg",
   },
 ];
 
@@ -86,14 +83,6 @@ export default function Projects() {
             >
               {project.description}
             </Text>
-            <Plane args={[3, 2]} position={[0, -0.5, 0]}>
-              <meshBasicMaterial attach="material">
-                <primitive
-                  attach="map"
-                  object={new THREE.TextureLoader().load(project.image)}
-                />
-              </meshBasicMaterial>
-            </Plane>
           </group>
         ))}
       </group>
