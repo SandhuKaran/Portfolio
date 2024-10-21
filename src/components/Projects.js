@@ -7,19 +7,20 @@ import { Telescope } from "./Telescope";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "TravelEase",
     description:
-      "A personal portfolio website \nshowcasing my skills and projects, \nbuilt with React and Three.js.",
+      "App to optimize employee schedules \nusing a Node.js, React.js and MapsAPI, \ncalculating the most efficient routes.",
   },
   {
-    title: "E-commerce Platform",
+    title: "GNW Website",
     description:
-      "Developed an e-commerce \nplatform with a custom shopping \ncart and payment integration.",
+      "Responsive, user‐friendly website to \nshowcase services, improve customer \nengagement, streamline online presence",
   },
+
   {
-    title: "Weather App",
+    title: "LinearLab",
     description:
-      "A weather application \nproviding real-time weather updates \nand forecasts using a public API.",
+      "Interactive visual interface to understand \nthe concepts of linear algebra such as \nmatrix transformations, eigenvectors",
   },
 ];
 

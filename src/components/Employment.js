@@ -6,22 +6,22 @@ import { Suitcase } from "./Suitcase";
 
 const experiences = [
   {
-    position: "Frontend Developer",
-    company: "Tech Solutions Inc.",
+    position: "Web Administrator \nand Operations Manager",
+    company: "GNW Landscaping, Georgetown",
     description:
-      "Developed and maintained \nweb applications using React, ensuring \noptimal performance and user experience.",
+      "Supervised workers, optimized routing schedules, \nand enhanced operational efficiency.\n\nHandled client interactions, complaints, \nand account management for a sub‐branch",
   },
   {
-    position: "Software Engineer Intern",
-    company: "Innovative Labs",
+    position: "Food Services Assistant",
+    company: "McMaster University",
     description:
-      "Assisted in the development of a \nmachine learning project, contributing to \ndata preprocessing and model training.",
+      "Communicated clearly and positively \nwith coworkers and management.\n\nMaintained high standards of customer service \nduring high‐volume, fast‐paced operations.",
   },
   {
-    position: "UI/UX Designer",
-    company: "Creative Minds",
+    position: "Manager",
+    company: "GNW Landscaping, Georgetown",
     description:
-      "Designed intuitive user interfaces and \nimproved user experience \nfor various mobile applications.",
+      "Supervised workers, optimized routing schedules, \nand enhanced operational efficiency.\n\nHandled client interactions, complaints, \nand account management for a sub‐branch",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Employment() {
               material-transparent
               material-opacity={1}
               anchorX="left"
-              anchorY="middle"
+              anchorY="bottom"
             >
               {exp.position}
             </Text>
@@ -83,13 +83,13 @@ export default function Employment() {
               material-transparent
               material-opacity={1}
               anchorX="left"
-              anchorY="middle"
+              anchorY="bottom"
             >
               {exp.company}
             </Text>
             <Text
               position={[0, -1.2, 0]}
-              fontSize={0.3}
+              fontSize={0.2}
               font={"Raleway/static/Raleway-Light.ttf"}
               color="white"
               material-transparent

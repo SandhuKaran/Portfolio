@@ -4,9 +4,32 @@ import { Text } from "@react-three/drei";
 import { TweenMax } from "gsap";
 import { Monitor } from "./Monitor";
 
-const skills = [
+const skills1 = [
   {
     title: "JavaScript",
+    description:
+      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+  },
+  {
+    title: "Python",
+    description:
+      "Proficient in Python for \nscripting, data analysis, and web \ndevelopment with Django and Flask.",
+  },
+  {
+    title: "CSS",
+    description:
+      "Skilled in styling web \npages using CSS, including preprocessors like \nSASS and frameworks like Bootstrap.",
+  },
+  {
+    title: "JavaScript",
+    description:
+      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+  },
+];
+
+const skills2 = [
+  {
+    title: "python, java, c",
     description:
       "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
   },
@@ -67,7 +90,7 @@ export default function Skills() {
       </Text>
       <Monitor position={[0, -60, -12]} />
       <group position={[0, -58, 0]}>
-        {skills.map((skill, index) => (
+        {skills1.map((skill, index) => (
           <React.Fragment key={index}>
             <group position={[5, -index * 2, 0]}>
               <Text
@@ -96,6 +119,12 @@ export default function Skills() {
                 {skill.description}
               </Text>
             </group>
+          </React.Fragment>
+        ))}
+      </group>
+      <group position={[0, -58, 0]}>
+        {skills2.map((skill, index) => (
+          <React.Fragment key={index}>
             <group position={[-5, -index * 2, 0]}>
               <Text
                 ref={(el) => (rightRefs.current[index] = el)}

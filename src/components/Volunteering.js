@@ -6,22 +6,16 @@ import { Houseplant } from "./Houseplant";
 
 const volunteeringExperiences = [
   {
-    position: "Community Volunteer",
-    organization: "Local Shelter",
+    position: "McMaster Start Coding",
+    organization: "McMaster University",
     description:
-      "Assisted in organizing events and \nprovided support to the community \nmembers.",
+      "Taught functional programming \nusing visual tools to elementary \nschool kids.",
   },
   {
-    position: "Environmental Activist",
-    organization: "Green Earth",
+    position: "sciFUNdamentals",
+    organization: "McMaster University",
     description:
-      "Participated in tree plantation drives \nand awareness campaigns for \nenvironmental conservation.",
-  },
-  {
-    position: "Teaching Assistant",
-    organization: "Youth Education Program",
-    description:
-      "Helped students with their studies \nand organized educational activities \nto promote learning.",
+      "Designed demo kits for volunteer \nteachers to present fun science \ndemos to elementary school kids",
   },
 ];
 
