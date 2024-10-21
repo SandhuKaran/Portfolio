@@ -6,6 +6,12 @@ import { Houseplant } from "./Houseplant";
 
 const volunteeringExperiences = [
   {
+    position: "Linux Tutor",
+    organization: "Private Tutoring",
+    description:
+      "Provide hands-on guidance in \nLinux command-line usage, system \nadministration, and shell scripting.",
+  },
+  {
     position: "McMaster Start Coding",
     organization: "McMaster University",
     description:

@@ -8,45 +8,56 @@ const skills1 = [
   {
     title: "JavaScript",
     description:
-      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+      "Experienced in building web applications \nusing JavaScript, including ES6+ features \nand frameworks like React.",
   },
   {
-    title: "Python",
+    title: "Git/GitHub",
     description:
-      "Proficient in Python for \nscripting, data analysis, and web \ndevelopment with Django and Flask.",
+      "Experienced in version control with Git, \nutilizing GitHub for collaborative projects, \ncode management, and open-source.",
   },
   {
-    title: "CSS",
+    title: "MySQL, MongoDB",
     description:
-      "Skilled in styling web \npages using CSS, including preprocessors like \nSASS and frameworks like Bootstrap.",
+      "Knowledgeable in both relational (MySQL) \nand NoSQL (MongoDB) databases for \ndata modeling and managemen.",
   },
   {
-    title: "JavaScript",
+    title: "APIs and RESTful Services",
     description:
-      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+      "Proficiency in creating and consuming \nRESTful APIs or GraphQL for communication \nbetween frontend and backend services",
+  },
+  {
+    title: "Agile/Scrum Methodologies",
+    description:
+      "Proficiency in Agile frameworks like Scrum \nwith a focus on iterative development, \ncontinuous feedback, and collaboration.",
   },
 ];
 
 const skills2 = [
   {
-    title: "python, java, c",
+    title: "Python, Java, C",
     description:
-      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+      "Proficient in Python for scripting and automation, \nJava for object-oriented programming, \nand C for system-level programming.",
   },
   {
-    title: "Python",
+    title: "React.js, Node.js, Three.js",
     description:
-      "Proficient in Python for \nscripting, data analysis, and web \ndevelopment with Django and Flask.",
+      "Developed web apps using React.js for frontend, \nNode.js for backend services, and \nThree.js for 3D graphics rendering and animations.",
   },
   {
-    title: "CSS",
+    title: "Unix-like Systems, Shell Scripting",
     description:
-      "Skilled in styling web \npages using CSS, including preprocessors like \nSASS and frameworks like Bootstrap.",
+      "Proficient in Unix-like environments, with \nexpertise in shell scripting for \nmanaging files, and system processes.",
+  },
+
+  {
+    title: "C++, openGL",
+    description:
+      "Experienced in using OpenGL for rendering \n2D and 3D graphics. Familiarity with graphics \npipelines and real-time rendering techniques.",
   },
   {
-    title: "JavaScript",
+    title: "CI/CD",
     description:
-      "Experienced in building web \napplications using JavaScript, including ES6+ \nfeatures and frameworks like React.",
+      "Familiarity with CI/CD pipelines (e.g. GitHub Actions) \nfor automating software builds, \ntesting, and deployment processes.",
   },
 ];
 
