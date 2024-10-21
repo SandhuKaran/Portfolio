@@ -6,6 +6,12 @@ import { Suitcase } from "./Suitcase";
 
 const experiences = [
   {
+    position: "Teaching Assistant",
+    company: "McMaster University",
+    description:
+      "TA for SFWRENG 2XC3 \nSoftware Eng Practice and Experience: Development Basics  \n\nLeading tutorials focused on UNIX like systems, shell scripting, \nGit/GitHub, and C programming.",
+  },
+  {
     position: "Web Administrator \nand Operations Manager",
     company: "GNW Landscaping, Georgetown",
     description:
@@ -16,12 +22,6 @@ const experiences = [
     company: "McMaster University",
     description:
       "Communicated clearly and positively \nwith coworkers and management.\n\nMaintained high standards of customer service \nduring high‐volume, fast‐paced operations.",
-  },
-  {
-    position: "Manager",
-    company: "GNW Landscaping, Georgetown",
-    description:
-      "Supervised workers, optimized routing schedules, \nand enhanced operational efficiency.\n\nHandled client interactions, complaints, \nand account management for a sub‐branch",
   },
 ];
 
@@ -59,9 +59,9 @@ export default function Employment() {
 
       <Suitcase position={[6.4, -15, -12]} />
 
-      <group position={[-5, -13, 0]}>
+      <group position={[-5, -12, 0]}>
         {experiences.map((exp, index) => (
-          <group key={index} position={[0, -index * 2.6, 0]}>
+          <group key={index} position={[0, -index * 3.5, 0]}>
             <Text
               ref={(el) => (refs.current[index] = el)}
               position={[0, 0, 0]}
