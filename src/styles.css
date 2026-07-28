@@ -1,64 +1,126 @@
-.raleway-bold {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-void: #05060f;
+  --color-ink: #0a0d1e;
+  --color-haze: #97a3c7;
+  --color-chalk: #e7ecff;
+  --color-nova: #f272c8;
+  --color-beam: #7aa2ff;
+  --color-ion: #6ee7ff;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root,
-.app-container {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* Prevents scrollbars on the container */
-}
-
-body {
-  overflow-y: scroll; /* Allows scrolling on the body */
-}
-
-canvas {
-  display: block;
-}
-
-.app-container {
-  height: 500vh; /* Make the container tall enough to scroll */
-  position: relative;
-}
-
-main {
-  position: absolute;
-}
-
-.welcome-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
-  animation: fadeIn 2s ease-in-out;
-  pointer-events: none; /* Ensure it doesn't block interactions */
-}
-
-body {
-  background-color: #111;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
   }
-  to {
-    opacity: 1;
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(120% 80% at 78% 8%, rgba(120, 60, 180, 0.22), transparent 60%),
+      radial-gradient(90% 70% at 12% 88%, rgba(20, 90, 170, 0.2), transparent 62%),
+      linear-gradient(180deg, #05060f 0%, #070917 45%, #05060f 100%);
+    background-attachment: fixed;
+    color: var(--color-chalk);
+    font-family: var(--font-display);
+    /* iOS bounce reveals the page background behind the fixed canvas. */
+    overscroll-behavior-y: none;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-nova) 40%, transparent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ion);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  canvas {
+    display: block;
+    /* Let vertical gestures scroll the page while horizontal drags still reach
+       the lanyard card. Without this R3F's default `touch-action: none` would
+       trap every touch on the canvas and the page would refuse to scroll. */
+    touch-action: pan-y;
+  }
+}
+
+@layer components {
+  /* Frosted content card. Kept translucent so the flight stays visible behind
+     the text — the scene is the point. */
+  .panel {
+    pointer-events: auto;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(154, 172, 235, 0.16);
+    background: linear-gradient(
+      160deg,
+      rgba(12, 16, 38, 0.82) 0%,
+      rgba(8, 11, 26, 0.66) 100%
+    );
+    backdrop-filter: blur(14px) saturate(130%);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.05) inset,
+      0 24px 70px -30px rgba(0, 0, 0, 0.9);
+    padding: 1.5rem 1.35rem;
+  }
+
+  @media (min-width: 768px) {
+    .panel {
+      padding: 2rem 2.15rem;
+    }
+  }
+
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-beam);
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.03em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid rgba(154, 172, 235, 0.2);
+    background: rgba(122, 162, 255, 0.08);
+    color: #c3cdf0;
+    white-space: nowrap;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease;
+  }
+
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
